@@ -1,5 +1,5 @@
-const { Blockchain,Transaction } = require('./blockchain');
-const EC = require('elliptic').ec;
+import { Blockchain, Transaction } from './blockchain';
+import { ec as EC } from 'elliptic';
 const ec = new EC('secp256k1');
 
 const myKey = ec.keyFromPrivate('541e2caf2e88293a998fe7d98249be0935b52aa7786d162e840406c7fa23cb63');

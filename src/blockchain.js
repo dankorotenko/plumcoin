@@ -1,5 +1,5 @@
-const SHA256 = require('crypto-js/sha256');
-const EC = require('elliptic').ec;
+import SHA256 from 'crypto-js/sha256';
+import { ec as EC } from 'elliptic';
 const ec = new EC('secp256k1');
 
 class Transaction {
@@ -160,5 +160,7 @@ class Blockchain {
 
 }
 
-module.exports.Blockchain  = Blockchain;
-module.exports.Transaction  = Transaction;
+const _Blockchain = Blockchain;
+export { _Blockchain as Blockchain };
+const _Transaction = Transaction;
+export { _Transaction as Transaction };
